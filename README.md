@@ -53,10 +53,6 @@ LoanDefaulted (target variable)
 Model	Type	Description
 Logistic Regression	Linear	Interpretable baseline
 LightGBM	Tree-based	Captures non-linear patterns and interactions
-💫 Results
-Model	Precision	Recall	F1-score	AUC
-Logistic Regression	0.66	0.70	0.68	0.71
-LightGBM	0.68	0.74	0.70	0.75
 
 LightGBM achieved higher AUC and recall, showing stronger performance in identifying defaults.
 
