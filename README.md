@@ -19,12 +19,27 @@ The original thesis compared three models (Logistic Regression, XGBoost, and Lig
 Here, the focus is only on Logistic Regression and LightGBM to keep the workflow clear and easy to reproduce.
 
 🐈 Workflow
+
 Step	Description
+
 Data Cleaning	Keep only female borrowers and remove incomplete records
+
 Feature Engineering	Create features like Payment-to-Income, Debt-to-Income, and Childbearing Age
+
 EDA	Explore patterns such as default rate by education or loan duration
+
 Modeling	Train Logistic Regression and LightGBM with 5-fold cross-validation
+
 Evaluation	Compare metrics such as AUC, Precision, and Recall
+
+💡 Why Focus on Female Borrowers
+
+Most credit risk models are trained on mixed or male-dominated datasets, assuming one-size-fits-all risk patterns.
+However, research shows that female borrowers often have different financial behaviors. For example, more stable repayment patterns but smaller loan sizes.
+
+This project focuses only on female borrower data to examine: if a model trained for women captures risk signals differently.
+
+The goal is to highlight the importance of gender-sensitive credit modeling, especially for improving fairness and inclusiveness in financial decision-making.
 
 📋 Dataset
 
