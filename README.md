@@ -1,90 +1,97 @@
-# Credit-Risk-Prediction
-Predicting loan default risk using Logistic Regression and LightGBM
+# 🎯 Predicting Loan Default Risk using Logistic Regression and LightGBM
 
-💳 Loan Default Prediction for Female Borrowers
+📌 **Thesis Project: Loan Default Prediction for Female Borrowers**  
+*Master’s in Data Science – Tilburg University*
 
-Heyy 🤸, I’m Zoe, and welcome to my project page 💕
+---
 
-This is a simplified version of my master’s thesis Loan Default Prediction for Female Borrowers: A Comparative Study on European P2P Lending Data.
-It uses Python and machine learning to predict whether a female borrower is likely to default on a loan.
-The notebook walks through data cleaning, feature creation, exploration, and two models: Logistic Regression and LightGBM.
+## 🧠 Overview
 
+This project presents a simplified version of my master’s thesis:  
+**“Loan Default Prediction for Female Borrowers: A Comparative Study on European P2P Lending Data.”**
 
-🔎 Project Overview
+The notebook demonstrates how to use Python and machine learning to predict whether a female borrower is likely to default on a loan. It walks through:
 
-In peer-to-peer lending, it’s important to know who might default before approving a loan.
-This project focuses on female borrowers from the Bondora platform and builds a model to assess default risk.
-The goal is to see how model complexity affects prediction performance.
+- Data cleaning and preprocessing  
+- Feature engineering  
+- Exploratory data analysis (EDA)  
+- Model training using Logistic Regression and LightGBM  
+- Evaluation using AUC, precision, recall
 
-The original thesis compared three models (Logistic Regression, XGBoost, and LightGBM) and included SHAP analysis.
-Here, the focus is only on Logistic Regression and LightGBM to keep the workflow clear and easy to reproduce.
+The original thesis also included XGBoost and SHAP analysis. For simplicity, this repo focuses on two models: **Logistic Regression** and **LightGBM**.
 
+---
 
-💡 Why Focus on Female Borrowers
+## 💡 Motivation: Why Focus on Female Borrowers?
 
-Most credit risk models are trained on mixed or male-dominated datasets, assuming one-size-fits-all risk patterns.
-However, research shows that female borrowers often have different financial behaviors. For example, more stable repayment patterns but smaller loan sizes.
+Traditional credit risk models often rely on mixed or male-dominated data. However, research indicates female borrowers may exhibit different financial behaviors — e.g., smaller loan sizes but more stable repayment patterns.
 
-This project focuses only on female borrower data to examine: if a model trained for women captures risk signals differently.
+By focusing solely on female borrowers, this project explores whether tailored credit models can improve **fairness and prediction quality** in financial decision-making.
 
-The goal is to highlight the importance of gender-sensitive credit modeling, especially for improving fairness and inclusiveness in financial decision-making.
+---
 
+## 🔄 Workflow Summary
 
-🐈 Workflow
+| Step               | Description                                                                 |
+|--------------------|-----------------------------------------------------------------------------|
+| Data Cleaning       | Filter female borrowers, remove incomplete records                         |
+| Feature Engineering | Create variables: Payment-to-Income, Debt-to-Income, Childbearing Age      |
+| EDA                 | Visualize default rates by education, duration, etc.                        |
+| Modeling            | Train Logistic Regression and LightGBM with 5-fold cross-validation         |
+| Evaluation          | Compare AUC, precision, recall                                              |
 
-Step	Description
+---
 
-Data Cleaning	Keep only female borrowers and remove incomplete records
+## 📊 Dataset
 
-Feature Engineering	Create features like Payment-to-Income, Debt-to-Income, and Childbearing Age
+Sourced from **Bondora**, a European peer-to-peer lending platform.
 
-EDA	Explore patterns such as default rate by education or loan duration
+Each row = one borrower’s loan application.  
+Main variables:
 
-Modeling	Train Logistic Regression and LightGBM with 5-fold cross-validation
+- `Age`  
+- `IncomeTotal`  
+- `ExistingLiabilities`  
+- `LoanDuration`  
+- `Education`  
+- `OccupationArea`  
+- `HomeOwnershipType`  
+- `LoanDefaulted` *(Target variable)*
 
-Evaluation	Compare metrics such as AUC, Precision, and Recall
+---
 
+## 🔍 Models Used
 
+| Model               | Type        | Notes                                           |
+|--------------------|-------------|--------------------------------------------------|
+| Logistic Regression | Linear      | Interpretable baseline                          |
+| LightGBM            | Tree-based  | Captures nonlinear patterns and interactions    |
 
-📋 Dataset
+✅ **LightGBM** showed higher AUC and better recall, indicating better performance in identifying defaults.
 
-The dataset comes from Bondora, a European P2P lending platform.
-Each record represents one borrower and one loan application.
+---
 
-Main variables include:
+## 🌱 Future Work
 
-Age
+- Add **XGBoost** for complete comparison  
+- Apply **hyperparameter tuning** (e.g., GridSearch, Optuna)  
+- Integrate **SHAP** for model explainability  
+- Explore **gender-balanced** model comparisons
 
-IncomeTotal
+---
 
-ExistingLiabilities
+## 🔧 Tech Stack
 
-LoanDuration
+- Python (Pandas, Scikit-learn, LightGBM)  
+- Jupyter Notebook  
+- Matplotlib / Seaborn for EDA  
 
-Education
+---
 
-OccupationArea
+## 👩 Author
 
-HomeOwnershipType
-
-LoanDefaulted (target variable)
-
-
-🧠 Models
-Model	Type	Description
-
-Logistic Regression	Linear	Interpretable baseline
-
-LightGBM	Tree-based	Captures non-linear patterns and interactions
-
-LightGBM achieved higher AUC and recall, showing stronger performance in identifying defaults.
-
-
-🌸 Future Work
-
-Add XGBoost for a full comparison
-
-Include parameter tuning (GridSearch or Optuna)
-
-Apply SHAP to explain model predictions
+**Zoe Xia**  
+> MSc Data Science and Society | Power BI & Databricks Certified  
+> 💼 linkedin.com/in/zoexia  
+> 📂 [More projects on GitHub](https://github.com/Zoe0331x)
 
