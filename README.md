@@ -92,6 +92,6 @@ Main variables:
 
 **Zoe Xia**  
 > MSc Data Science and Society | Power BI & Databricks Certified  
-> 💼 linkedin.com/in/zoexia  
+> 💼 [linkedin.com/in/zoexia](https://www.linkedin.com/in/zoe-xia-4b6307132/)
 > 📂 [More projects on GitHub](https://github.com/Zoe0331x)
 
